@@ -15,7 +15,7 @@
 - [x] RungeKuttaByss
 - [x] RungeKuttaBypw
 - [x] pw2ab
-- [x] AugmentedMatri
+- [x] AugmentedMatrix
 - [x] Euler
 - [x] Trapezoid
 
