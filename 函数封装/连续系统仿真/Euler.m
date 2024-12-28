@@ -7,7 +7,7 @@ function [t, y]=Euler(num, den, r)
     h=input('仿真步长h=');
     y=[0];
     x=0;
-    for t=h:h:10;
+    for t=h:h:10
         x = x+h*(A*x + b*r);
         y = [y,x];
     end
