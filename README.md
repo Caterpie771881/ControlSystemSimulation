@@ -32,6 +32,9 @@
 - [x] puredelay
 - [x] SamplingControlSimulation
 
+辅助分析
+- [ ] JudgeByEigenvalue
+
 ## 使用方法
 
 由于这门课是开卷上机考试, 所以我建议将该项目下载到本地, 然后打成压缩包拷贝到考场电脑
