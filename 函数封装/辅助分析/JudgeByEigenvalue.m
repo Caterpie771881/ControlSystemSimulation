@@ -1,5 +1,5 @@
-%% 使用系统特征值判定系统稳定性
-% A: 系统状态方程的 A 参数
+%% 使用系统特征值判定系统稳定性的封装
+% A: 系统状态空间的 A 参数
 function JudgeByEigenvalue(A)
     P=poly(A);
     r=roots(P)
