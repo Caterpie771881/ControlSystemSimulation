@@ -34,6 +34,12 @@
 
 辅助分析
 - [ ] JudgeByEigenvalue
+- [ ] JudgeByUcVo
+
+辅助设计
+- [ ] SeriesLead
+- [ ] SeriesLag
+- [ ] SeriesLagLead
 
 ## 使用方法
 
