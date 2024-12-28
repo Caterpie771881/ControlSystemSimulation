@@ -556,6 +556,12 @@
 <pre><code class="language-matlab"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_identifier'>num</span><span class='ace_keyword ace_operator'>=</span><span class='ace_paren ace_lparen'>[</span><span class='ace_constant ace_numeric'>6</span> <span class='ace_constant ace_numeric'>12</span> <span class='ace_constant ace_numeric'>6</span> <span class='ace_constant ace_numeric'>10</span><span class='ace_paren ace_rparen'>]</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>den</span><span class='ace_keyword ace_operator'>=</span><span class='ace_paren ace_lparen'>[</span><span class='ace_constant ace_numeric'>1</span> <span class='ace_constant ace_numeric'>2</span> <span class='ace_constant ace_numeric'>3</span> <span class='ace_constant ace_numeric'>1</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_paren ace_rparen'>]</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'><span class='ace_identifier'>G</span><span class='ace_keyword ace_operator'>=</span><span class='ace_identifier'>tf</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>num</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>den</span><span class='ace_paren ace_rparen'>)</span>
 </div></div></div></code></pre>
+<p>当使用 <code>tf(num, den, ts)</code> 时, 将会创建离散系统的传递函数</p>
+<p>ts 为采样时间, 如果想要不指定采样时间的话, 令 ts=-1</p>
+<p>example:</p>
+<pre><code class="language-matlab"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_identifier'>num</span><span class='ace_keyword ace_operator'>=</span><span class='ace_paren ace_lparen'>[</span><span class='ace_constant ace_numeric'>3.4</span> <span class='ace_constant ace_numeric'>15</span><span class='ace_paren ace_rparen'>]</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_identifier'>den</span><span class='ace_keyword ace_operator'>=</span><span class='ace_paren ace_lparen'>[</span><span class='ace_constant ace_numeric'>1</span> <span class='ace_constant ace_numeric'>-1.6</span> <span class='ace_constant ace_numeric'>0.8</span><span class='ace_paren ace_rparen'>]</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_identifier'>Gz</span><span class='ace_keyword ace_operator'>=</span><span class='ace_identifier'>tf</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>num</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>den</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_paren ace_rparen'>)</span>
+</div></div></div></code></pre>
 <h3>多项式乘法运算</h3>
 <p>用于快速构造分式未展开的传递函数</p>
 <p><code>conv(a, b)</code></p>
@@ -590,8 +596,8 @@
 <p><code>[A, B, C, D]=tf2ss(num, den)</code></p>
 <p><code>[num, den]=ss2tf(A, B, C, D)</code></p>
 <p>传递函数与零极点模型互转</p>
-<p><code>[Z, P, K]=tf2zpk(num, den)</code></p>
-<p><code>[num, den]=zpk2tf(Z, P, K)</code></p>
+<p><code>[Z, P, K]=tf2zp(num, den)</code></p>
+<p><code>[num, den]=zp2tf(Z, P, K)</code></p>
 <p>零极点模型与状态空间互转</p>
 <p><code>[Z, P, K]=ss2zp(A, B, C, D)</code></p>
 <p><code>[A, B, C, D]=zp2ss(Z, P, K)</code></p>
